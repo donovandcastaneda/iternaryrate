@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { cn } from "../lib/utils";
+import { cn } from "../app/lib/utils";
 import Image from "next/image";
 
 interface Props {
