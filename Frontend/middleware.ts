@@ -1,6 +1,6 @@
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 
-export function middleware(request: { cookies: { get: (arg0: string) => { value: string; }; }; url: string | URL | undefined; }){
+export function middleware(request: NextRequest){
 
     const isAuthenticated = request.cookies.get("isAuthenticated")?.value === "true";
 
@@ -14,5 +14,5 @@ export function middleware(request: { cookies: { get: (arg0: string) => { value:
 }
 
 export const config = {
-    matcher: ['/user']
+    matcher: ['/user', "/post" ]
 }
