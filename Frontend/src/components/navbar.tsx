@@ -40,7 +40,15 @@ const Navbar = ({}) => {
             </div>
 
             {isAuthenticated ? (
+              <div>
+                <Button><Link href="/post">Post</Link></Button>
               <Button onClick={logout}>Logout</Button>
+
+
+
+
+              </div>
+
             ) : (
               <div id="auth" className="space-x-2">
                 <Button>
